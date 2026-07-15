@@ -384,6 +384,89 @@
                 height: 350px;
             }
         }
+
+        .contact-section-title {
+            font-family: var(--font-marcellus);
+            font-size: 42px;
+            color: var(--theme-green);
+            font-weight: 500;
+            transition: var(--transition-smooth);
+        }
+
+        .contact-card-action {
+            color: var(--theme-gold);
+            font-weight: 500;
+            margin-top: 5px;
+            font-size: 14px;
+            display: inline-block;
+        }
+
+        .contact-card-phone {
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--theme-green);
+            margin-top: 2px;
+            display: inline-block;
+        }
+
+        .contact-card-email {
+            font-weight: 600;
+            color: var(--theme-green);
+            margin-top: 2px;
+            display: inline-block;
+            word-break: break-word;
+            overflow-wrap: break-word;
+        }
+
+        /* ── RESPONSIVENESS REDESIGN ────────────────────────── */
+        @media (max-width: 767px) {
+            .contact-section {
+                padding: 60px 0;
+            }
+            .contact-section-title {
+                font-size: 32px;
+            }
+        }
+
+        @media (max-width: 575px) {
+            .contact-section-title {
+                font-size: 28px;
+            }
+            .contact-form-card {
+                padding: 24px;
+            }
+            .form-title-wrap {
+                margin-bottom: 25px;
+            }
+            .form-title-wrap h3 {
+                font-size: 24px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .contact-card {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                padding: 24px 16px;
+            }
+            .contact-icon-box {
+                margin-bottom: 5px;
+            }
+            .contact-card-content {
+                align-items: center;
+            }
+            .contact-card-content p,
+            .contact-card-content span,
+            .contact-card-content a {
+                font-size: 14px;
+                word-break: break-word;
+                overflow-wrap: break-word;
+            }
+            .contact-card-phone {
+                font-size: 16px;
+            }
+        }
     </style>
 </head>
 
@@ -535,9 +618,7 @@
                                 <circle cx="5" cy="5" r="3" />
                             </svg>
                         </span>
-                        <h2
-                            style="font-family: var(--font-marcellus); font-size: 42px; color: var(--theme-green); font-weight: 500;">
-                            How Can We Help You?</h2>
+                        <h2 class="contact-section-title">How Can We Help You?</h2>
                         <p
                             style="font-family: var(--font-dmsans); color: var(--theme-text-dark); margin-top: 15px; font-size: 15px;">
                             Whether you'd like to schedule a personal tour of the villas, ask about our clinical care
@@ -560,9 +641,7 @@
                             <h4>Address</h4>
                             <p>Green Gardens, 16/13 Kuzhikulam<br>Valavoor P.O., Pala, Kottayam,<br>Kerala, India -
                                 686635</p>
-                            <span
-                                style="color: var(--theme-gold); font-weight: 500; margin-top: 5px; font-size: 14px;">Get
-                                Directions <i class="bi bi-arrow-right"></i></span>
+                            <span class="contact-card-action">Get Directions <i class="bi bi-arrow-right"></i></span>
                         </div>
                     </a>
 
@@ -574,9 +653,7 @@
                         <div class="contact-card-content">
                             <h4>Phone Number</h4>
                             <p>For inquiries, visits, and bookings:</p>
-                            <span
-                                style="font-size: 18px; font-weight: 600; color: var(--theme-green); margin-top: 2px;">+91
-                                892 123 4567</span>
+                            <span class="contact-card-phone">+91 892 123 4567</span>
                         </div>
                     </a>
 
@@ -588,8 +665,7 @@
                         <div class="contact-card-content">
                             <h4>Email Address</h4>
                             <p>General inquiries & administration:</p>
-                            <span
-                                style="font-weight: 600; color: var(--theme-green); margin-top: 2px;">greengardens.connect@gmail.com</span>
+                            <span class="contact-card-email">greengardens.connect@gmail.com</span>
                         </div>
                     </a>
                 </div>
